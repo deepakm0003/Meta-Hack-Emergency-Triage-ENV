@@ -1,10 +1,18 @@
+---
+title: Emergency Clinical Triage Env
+emoji: 🚑
+colorFrom: red
+colorTo: blue
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 # 🏥 Emergency Clinical Triage Environment
 
 An **OpenEnv-compatible** reinforcement learning environment where an LLM agent acts as an ER triage nurse. The agent must correctly prioritize patients by medical urgency (ESI 1–5), update its beliefs when new lab results arrive mid-episode, and—in the hardest task—allocate scarce ICU beds during a mass casualty event.
 
----
-
-## Hugging Face URL :- https://huggingface.co/spaces/deepak0003/Meta-Hack
+**Hugging Face Space:** https://huggingface.co/spaces/deepak0003/Meta-Hack
 
 ## 🏆 Benchmark Results
 
