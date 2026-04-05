@@ -85,7 +85,9 @@ def _generate_new_info(patients, step: int, inject_step: Optional[int]) -> str:
 # ── POST /reset ───────────────────────────────────────────────────────────────
 
 @app.post("/reset")
-def reset(body: ResetRequest) -> Dict[str, Any]:
+def reset(body: Optional[ResetRequest] = None) -> Dict[str, Any]:
+    if body is None:
+        body = ResetRequest()
     if body.task_id not in TASK_BUILDERS:
         raise HTTPException(
             status_code=400,
