@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from main import app  # noqa: F401
 
 
-def start():
+def main():
     """Entry point for [project.scripts] server command."""
     import uvicorn
     uvicorn.run(
@@ -23,4 +23,4 @@ def start():
 
 
 if __name__ == "__main__":
-    start()
+    main()

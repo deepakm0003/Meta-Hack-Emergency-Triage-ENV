@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.scripts]
-server = "server.app:start"
+server = "server.app:main"
 
 [project.urls]
 Repository = "https://github.com/deepakm0003/Meta-Hack-Emergency-Triage-ENV"
