@@ -1,0 +1,29 @@
+name: emergency-triage-env
+version: "1.0.0"
+description: >
+  An ER triage environment where an LLM agent must prioritize patients
+  under uncertainty and time pressure. New information arrives mid-episode.
+author: "your-hf-username"
+license: "MIT"
+tags: ["healthcare", "triage", "multi-step", "reasoning", "openenv"]
+tasks:
+  - id: static_triage
+    description: "Rank 5 patients with complete vitals by ESI priority."
+    difficulty: easy
+  - id: late_info_triage
+    description: "Rank patients with missing vitals. Lab results injected at step 3."
+    difficulty: medium
+  - id: mass_casualty
+    description: "12 patients, conflicting notes, ICU bed constraints. Rank and allocate."
+    difficulty: hard
+api:
+  reset: POST /reset
+  step: POST /step
+  state: GET /state
+  health: GET /health
+  tasks: GET /tasks
+env_vars:
+  - API_BASE_URL
+  - MODEL_NAME
+  - HF_TOKEN
+  - ENV_BASE_URL
